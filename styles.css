@@ -1,0 +1,17 @@
+.div-wrapper {
+    height: 200px;
+    margin-top: 40px;
+    /* border: 2px line #ddd; */
+    border-radius: 8px;
+}
+
+.div-to-align {
+    width: 75%;
+    padding: 40px 20px;
+
+    /* .... */
+}
+
+.extra_spaces {
+    padding-top: 10rem;
+}

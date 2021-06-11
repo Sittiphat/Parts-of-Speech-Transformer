@@ -1,0 +1,19 @@
+{
+  "name": "translate-pos-server",
+  "version": "1.0.0",
+  "description": "An express server that translates a string noun text into another language.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesse Narkmanee",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "parts-of-speech": "^0.3.0",
+    "translate": "^1.2.3"
+  }
+}

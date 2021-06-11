@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta property="og:image" content="https://img.icons8.com/color/452/transformer.png" />
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+   <link rel="stylesheet" href="styles.css">
+   <link rel="shortcut icon" href="https://img.icons8.com/color/452/transformer.png" type="image/x-icon">
+   <title>Parts of Speech Transformer</title>
+</head>
+
+<body>
+   <div class="section-1-container section-container">
+      <div class="container">
+         <div class="row">
+            <div class="col section-1 section-description">
+               <h1>Parts of Speech Transformer</h1>
+               <div class="divider-1"><span></span></div>
+               <p>A data transformer to help English learners identify different parts of speech such as adjectives,
+                  verbs, and nouns then inserts them into the sentence next to its corresponding words.</p>
+               <p>This application's API Endpoint can be found at: https://transform-text-api.herokuapp.com/transform
+               </p>
+               <!-- Button trigger modal -->
+               <div class="d-flex justify-content-center"><button type="button" class="btn btn-outline-info"
+                     data-bs-toggle="modal" data-bs-target="#exampleModal">
+                     Launch Tutorial Video
+                  </button>
+               </div>
+               <!-- Modal -->
+               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h5 class="modal-title" id="exampleModalLabel">Tutorial Videos</h5>
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           <iframe width="465" height="315" src="https://www.youtube.com/embed/RD-qytiM3k4"
+                              title="YouTube video player" frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen></iframe>
+                           <iframe width="465" height="315" src="https://www.youtube.com/embed/LbopJUsW-EM"
+                              title="YouTube video player" frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen></iframe>
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <div class="row">
+            <div
+               class="col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center">
+               <div class="div-to-align">
+                  <div class="form-group">
+                     <form method="POST" id="form_API">
+                        <label for="API">Web Scraper Microservice API: </label>
+                        <input type="text" class="form-control" id="API" name="API"
+                           placeholder="Enter API Microservice Endpoint...">
+                        <br>
+                        <div class="d-flex justify-content-center">
+                           <button type="submit" class="btn btn-primary">Use API</button>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="form-group">
+                     <form method="POST" id="form_text">
+                        <label for="Text">Transform Text: </label>
+                        <textarea class="form-control" id="Text" name="Text" placeholder="Enter Body of Text..."
+                           rows="10"></textarea>
+                        <br>
+                        <div class="d-flex justify-content-center">
+                           <button type="submit" class="btn btn-success">Transform Text</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="extra_spaces">
+      <div class="d-flex justify-content-center">
+         <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-warning btn-sm" onmouseup="undo()">Undo</button>
+            <button type="button" class="btn btn-danger btn-sm" onClick="window.location.reload();">Restart</button>
+            <button type="button" class="btn btn-warning btn-sm" onmouseup="redo()">Redo</button>
+         </div>
+      </div>
+      <br>
+      <p id="output" class="text-center"></p>
+   </div>
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   <script src="app.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
